@@ -4,17 +4,6 @@
 
 int main()
 {
-    // int n;
-    // printf("Enter the number of elements in the array\n");
-    // scanf("%d",&n);
-    // int arr[n];
-    // int i;
-    // printf("Enter elements of the array\n");
-    // for(i=0;i<n;i++)
-    // {
-    //     scanf("%d",&arr[i]);
-    // }
-
 
     int n,p,q,temp;
     scanf("%d%d%d",&n,&p,&q);
@@ -38,35 +27,35 @@ int main()
     }
     fclose(fptr);
 
-    //bubble sort
-    // int i,j;
-    // for(i=0; i<n-1; i++)
-    // {
-    //     for(j=0; j<n-i-1; j++)
-    //     {
-    //         if(arr[j]>arr[j+1])
-    //         {
-    //             temp=arr[j];
-    //             arr[j]=arr[j+1];
-    //             arr[j+1]=temp;
-    //         }
-    //     }
-    // }
+    bubble sort
+    int i,j;
+    for(i=0; i<n-1; i++)
+    {
+        for(j=0; j<n-i-1; j++)
+        {
+            if(arr[j]>arr[j+1])
+            {
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }
 
-    // fptr = fopen("D:\\COLLEGE\\sem-4\\dsa\\fileIO\\duplicate_search.txt","w");
-    // int dupli=1,num;
-    // for(i=0;i<n-1;i++)
-    // {
-    //     if(arr[i]==arr[i+1])
-    //     {
-    //         dupli++;
-    //         num=arr[i];
-    //     }
-    // }
+    fptr = fopen("D:\\COLLEGE\\sem-4\\dsa\\fileIO\\duplicate_search.txt","w");
+    int dupli=1,num;
+    for(i=0;i<n-1;i++)
+    {
+        if(arr[i]==arr[i+1])
+        {
+            dupli++;
+            num=arr[i];
+        }
+    }
     
-    // printf("Number: %d repeted %d times in the array\n",num,dupli);
-    // fprintf(fptr,"\nNumber: %d repeted %d times in the array\n",num,dupli);
-    // fclose(fptr);
+    printf("Number: %d repeted %d times in the array\n",num,dupli);
+    fprintf(fptr,"\nNumber: %d repeted %d times in the array\n",num,dupli);
+    fclose(fptr);
     return 0;
 }
 /*
